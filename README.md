@@ -1,11 +1,15 @@
 download files
-simply start with command, 
-npm install,
+simply start with command,
 
-cd client, 
+npm install
 
-npm run dev,
-cd .. ,
-cd server,
-nodemon server.js,
+cd client
+
+npm run dev
+
+cd .. 
+
+cd server
+
+nodemon server.js
 
