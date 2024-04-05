@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
- const Register = () => {
+import {useAuth} from "../store/Auth";
+import "../components/Navbar.css";
+const Register = () => {
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -9,7 +10,8 @@ import { useNavigate } from "react-router-dom";
     password: "",
   });
 
-  const navigate= useNavigate();
+  const navigate = useNavigate();
+  const { storeTokenInLS } = useAuth();
 
   const handleInput = (e) => {
     console.log(e);
@@ -35,27 +37,28 @@ import { useNavigate } from "react-router-dom";
         },
         body: JSON.stringify(user),
       });
-      console.log("response data : ", response);
 
       if (response.ok) {
         const responseData = await response.json();
-        alert("registration successful");
+        console.log("res from server", responseData); // Corrected from res_data to responseData
+        storeTokenInLS(responseData.token);
         setUser({ username: "", email: "", phone: "", password: "" });
         navigate("/login");
         console.log(responseData);
-//       } else {
-//         console.log("error inside response ", "error");
+      } else {
+        console.log("Error inside response", response.statusText); // Logging the error message
       }
     } catch (error) {
       console.error("Error", error);
     }
   };
 
+
   return (
     <>
       <section>
         <main>
-          <div className="section-registration">
+          <div className="section-registration" >
             <div className="container grid grid-two-cols">
               <div className="registration-image reg-img">
                 <img
@@ -110,7 +113,7 @@ import { useNavigate } from "react-router-dom";
                     />
                   </div>
                   <br />
-                  <button type="submit" className="btn btn-submit">
+                  <button type="submit" className="btn btn-submit  secondary-btn">
                     Register Now
                   </button>
                 </form>

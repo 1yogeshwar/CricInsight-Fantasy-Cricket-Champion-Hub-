@@ -1,0 +1,69 @@
+/* CSS */
+body {
+    background-color: #f2f2f2; /* Set background color to a light gray */
+ /* Change font family for better readability */
+}
+.h1 {
+    text-align: center;
+    color: lightslategray;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse; /* Ensure borders collapse properly */
+    width: 80%; /* Set table width to 80% of the container */
+    margin: 20px auto; /* Center the table horizontally */
+    background-color: #fff; /* Set background color for the table */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+}
+
+th {
+    background-color: #f2f2f2; /* Set background color for header cells */
+    color: #333; /* Set text color for header cells */
+}
+
+td, th {
+    border: 2px solid #ccc; /* Add borders to all table cells */
+    font-weight: bold; /* Make the text bold */
+    padding: 10px; /* Add padding for better readability */
+    text-align: center; /* Center-align cell content */
+}
+
+/* Bold top border for each player row */
+tr.player-row {
+    border-top: 1px solid #ccc;
+}
+
+/* Bold right border for each cell */
+td, th {
+    border-right: 1px solid #ccc;
+}
+
+/* Remove right border for the last cell in each row */
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+/* Remove top border for the first row */
+tr:first-child {
+    border-top: none;
+}
+
+/* Remove top border for the first player row */
+tr.player-row:first-child {
+    border-top: none;
+}
+
+/* Set text color for table cells */
+td, th {
+    color: black;
+}
+
+.csk-page.mainpage.maincontent {
+    background-color: #EEF5FF;
+}
+/* styles.css */
+.r-gaikwad {
+    background-color: yellow;
+  }
+  

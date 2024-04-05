@@ -1,45 +1,44 @@
 import { NavLink } from "react-router-dom";
-// import { Analytics } from "../components/Analytics";
+import "../components/Navbar.css";
 
- const About = () => {
+const About = () => {
   return (
     <>
       <main>
-        <section className="section-hero">
+        <section className="section-hero about-section" >
           <div className="container grid grid-two-cols">
             <div className="hero-content">
-              {/* <p>We care to cure your Health</p> */}
+            <h1 style={{ fontSize: '4rem', marginTop:"20px" }}>About Us</h1>
 
-              <h1>Why Choose Us? </h1>
               <p>
-                Expertise: Our team consists of experienced IT professionals who
-                are passionate about staying up-to-date with the latest industry
-                trends.
+                Expertise: Our team consists of experienced IT professionals who are passionate
+                about staying up-to-date with the latest industry trends.
               </p>
               <p>
-                Customization: We understand that every business is unique.
-                Thats why we create solutions that are tailored to your specific
-                needs and goals.
+                Customization: We understand that every business is unique. Thats why we create
+                solutions that are tailored to your specific needs and goals.
               </p>
               <p>
-                Customer-Centric Approach: We prioritize your satisfaction and
-                provide top-notch support to address your IT concerns.
+                Customer-Centric Approach: We prioritize your satisfaction and provide top-notch
+                support to address your IT concerns.
               </p>
               <p>
-                Affordability: We offer competitive pricing without compromising
-                on the quality of our services.
+                Affordability: We offer competitive pricing without compromising on the quality
+                of our services.
               </p>
               <p>
-                Reliability: Count on us to be there when you need us. We're
-                committed to ensuring your IT environment is reliable and
-                available 24/7.
+                Reliability: Count on us to be there when you need us. We're committed to
+                ensuring your IT environment is reliable and available 24/7.
               </p>
-              <div className="btn btn-group">
-                <NavLink to="/contact">
-                  <button className="btn"> Connect Now</button>
-                </NavLink>
-                <button className="btn secondary-btn">learn more</button>
-              </div>
+              <div className="btn-group">
+  <NavLink to="/contact">
+    <button className="btn primary-btn">Connect Now</button>
+  </NavLink>
+  <NavLink to="/learn-more">
+    <button className="btn secondary-btn">Learn More</button>
+  </NavLink>
+</div>
+
             </div>
             <div className="hero-image">
               <img
@@ -52,9 +51,8 @@ import { NavLink } from "react-router-dom";
           </div>
         </section>
       </main>
-{/* 
-      <Analytics /> */}
     </>
   );
 };
+
 export default About;

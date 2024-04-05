@@ -1,0 +1,49 @@
+/* CSS for Nightmare component */
+.facts {
+  background-color: white; /* Set the background color of the section to white */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.nightmare-table {
+  width: 100%;
+}
+
+.nightmare-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nightmare-table th,
+.nightmare-table td {
+  border: 1px solid #ddd;
+  padding: 16px; /* Increase padding for better readability */
+  text-align: left;
+  font-size: 18px; /* Increase font size */
+}
+
+.nightmare-table th {
+  background-color: #f2f2f2;
+  font-weight: bold; /* Make the table headers bold */
+}
+
+.nightmare-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.nightmare-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.nightmare-table tbody td {
+  font-weight: normal; /* Remove bold from table content */
+}
+
+.facts h1 {
+  color: black; /* Set header color to black */
+  font-size: 3rem; /* Increase font size */
+}
+
+.facts p {
+  color: black; /* Set paragraph text color to black */
+  font-size: 1.6rem; /* Adjust font size */
+}

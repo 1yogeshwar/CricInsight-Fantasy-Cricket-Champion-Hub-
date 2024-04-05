@@ -1,4 +1,133 @@
-* {
-        flex: auto;
+/* Navbar.css */
 
+/* Customize the background color of the navbar */
+.navbar {
+  background-color:  black; /* Set the initial background color to transparent */
+}
+
+/* Customize the color of the navbar links */
+.navbar-nav .nav-link {
+  color: #050404; /* Change to your desired color */
+}
+
+/* Customize the color of the active navbar link */
+.navbar-nav .nav-link.active {
+  color: #000000; /* Change to your desired color */
+}
+
+/* Customize the hover effect of navbar links */
+.navbar-nav .nav-link:hover {
+  color: #030303; /* Change to your desired hover color */
+}
+
+/* Customize the toggle button color */
+.navbar-toggler-icon {
+  color: #000000; /* Set the toggle button color to white */
+}
+
+/* Change the background color of the navbar when toggled */
+.navbar.navbar-custom.bg-light {
+  background-color: #176f14c5 !important; /* Change to your desired color when toggled */
+}
+
+/* Ensure that the background color changes smoothly when toggled */
+.navbar-collapse {
+  transition: background-color 0.3s ease;
+}
+
+      
+            
+      
+      body {
+        background-color: transparent !important; /* Lightish color for the body background */
+      }
+      
+      .services-page {
+        background-color: #eaf4f9; /* Black background color */
+        color: #070609; /* White text color (optional) */
+      }
+      
+      
+.btn.first{
+   margin: auto; 
+      padding: 0.7rem 1.4rem;
+  color:white;
+  font-size: 1.1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  border: 0.1rem solid black;
+  letter-spacing: 0.1rem;
+  background-color: var(--btn-color);
+  border: 1px solid  #f3ecec !important;
+  transition: all 0.3s ease;
+  transition: border-color 0.3s;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+}
+
+.btn.second.ground {
+ 
+  margin: auto; 
+      padding: 0.7rem 1.4rem;
+  color:white;
+  font-size: 1.1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  border: 0.1rem solid black;
+  letter-spacing: 0.1rem;
+  background-color: var(--btn-color);
+  border: 1px solid  #f3ecec !important;
+  transition: all 0.3s ease;
+  transition: border-color 0.3s;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+}
+
+
+      /* registration */
+      :root {
+        --btn-color: #646cff; /* Define the custom color variable */
+      }
+      
+      /* Styles for button elements */
+      :root {
+        --btn-color: #646cfff5; /* Define the custom color variable */
+      }
+      
+      .btn.btn-submit {
+        text-transform: capitalize;
+        padding: 1rem 2.2rem;
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: white;
+        background-color: var(--btn-color); /* Use the custom color variable */
+        border-radius: 0.8rem;
+        border: 0.1rem solid transparent;
+        cursor: pointer;
+        letter-spacing: 0.1rem;
+        transition: all 0.3s ease;
+      }
+      
+      .btn.btn-submit:hover {
+        transform: scale(1.05);
+      }
+
+      /* About */
+      *{color: #030303;
+      }
+      
+
+      .navbar {
+  background-color: black; /* Set the initial background color to black */
+}
+
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    max-height: calc(100vh - 56px); /* Adjust the height to leave space for the navbar */
+    overflow-y: auto;
+  }
 }

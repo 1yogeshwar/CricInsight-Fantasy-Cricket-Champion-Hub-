@@ -1,0 +1,48 @@
+.footer {
+        background: #eaf4f9;
+        padding: 20px 0;
+        font-family: 'Play', sans-serif;
+        text-align: center;
+      }
+      
+      .row.mm {
+        width: 100%;
+        margin: 1% 0%;
+        padding: 0.6% 0%;
+        color: gray;
+        font-size: 0.8em;
+      }
+      
+      .row-icons.s {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .icon-link {
+        text-decoration: none;
+        color: rgb(78, 76, 76);
+        transition: 0.5s;
+        margin: 0 10px;
+      }
+      
+      .icon-link:hover {
+        color: #000;
+      }
+      
+      .footer-links {
+        width: 100%;
+      }
+      
+      .footer-links li {
+        display: inline-block;
+        margin: 0px 30px;
+      }
+      
+      .row-man {
+        font-size: 1rem;
+      }
+      
+      .footer-links li a {
+        color: rgb(61, 61, 61); /* Change the color to brown */
+      }
+      

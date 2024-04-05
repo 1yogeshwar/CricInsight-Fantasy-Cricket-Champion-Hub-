@@ -1,0 +1,28 @@
+#customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 40%; /* Set width to 40% */
+        float: center; /* Float the table to the right */
+      }
+      
+      #customers td,
+      #customers th {
+        padding: 8px;
+        border: 2px solid rgba(0, 0, 0, 0.144); /* Remove border */
+      }
+      
+      #customers tr:nth-child(odd) {
+        border-bottom: 1px solid rgba(61, 59, 59, 0.767); /* Add border between rows */
+      }
+      
+   h3 {
+   text-align: center;
+   }
+   .container {
+        text-align: center; /* Align content in the center */
+      }
+      
+      #customers {
+        margin: 0 auto; /* Center the table horizontally */
+      }
+      

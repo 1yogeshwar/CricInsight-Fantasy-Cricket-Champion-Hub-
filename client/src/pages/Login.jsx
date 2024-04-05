@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import {useAuth} from "../store/Auth";
 const Login = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
 
- const navigate = useNavigate();
+  // const { saveTokenInLocalStr } = useAuth();
+
+  const navigate = useNavigate();
+  const {storeTokenInLS}= useAuth();
 
   // let handle the input field value
   const handleInput = (e) => {
@@ -19,38 +22,36 @@ const Login = () => {
       [name]: value,
     });
   };
- 
 
- const handleSubmit= async (e) =>{
-        e.preventDefault();
-        console.log(user);
+  // let handle the form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
 
-        try {
-                const response = await fetch("http://localhost:5000/api/auth/login", {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify(user),
-                });
-          
-                if (response.ok) {
-                  const responseData = await response.json();
-                  console.log("after login: ", responseData);
-                  // toast.success("Registration Successful");
-                  alert("login successful");
-                 // saveTokenInLocalStr(responseData.token);
-                  navigate("/");
-                }
-              } catch (error) {
-                console.log(error);
-              }
- }
+      if (response.ok) {
+        const responseData = await response.json();
+        storeTokenInLS(responseData.token);
+        //np toast.success("Registration Successful");
+        //saveTokenInLocalStr(responseData.token);
+        navigate("/");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <section>
         <main>
-          <div className="section-registration">
+          <div className="section-registration" >
             <div className="container grid grid-two-cols">
               <div className="registration-image reg-img">
                 <img
@@ -73,7 +74,6 @@ const Login = () => {
                       value={user.email}
                       onChange={handleInput}
                       placeholder="email"
-                       autoComplete="off"
                     />
                   </div>
 
@@ -85,7 +85,6 @@ const Login = () => {
                       value={user.password}
                       onChange={handleInput}
                       placeholder="password"
-                      autoComplete="off"
                     />
                   </div>
                   <br />
